@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/gopool"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Shareride"
+        tools:targetApi="31">
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true">
+            <!-- Other activity attributes -->
+        </activity>
+
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true">
+            <!-- Other receiver attributes -->
+        </receiver>
+
+        <activity android:name="com.example.shareride.LoginActivity" />
+        <activity android:name="com.example.shareride.CreateProfileActivity" />
+        <activity android:name="com.example.shareride.RideActivity" />
+        <activity android:name="com.example.shareride.RegisterActivity" />
+        <activity android:name="com.example.shareride.trial" />
+        <activity
+            android:name=".CreateRideActivity"
+            android:label="Create Ride" />
+        <activity
+            android:name="com.example.shareride.rideList"
+            android:label="Ride List">
+        </activity>
+
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
